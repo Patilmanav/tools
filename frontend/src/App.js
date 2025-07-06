@@ -9,6 +9,7 @@ import AboutModal from './components/AboutModal';
 import FloatingBadge from './components/FloatingBadge';
 
 function App() {
+  console.log('API Base URL:', process.env.REACT_APP_API_URL);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [showSplitOptions, setShowSplitOptions] = useState(false);
   const [splitType, setSplitType] = useState('one-one');
