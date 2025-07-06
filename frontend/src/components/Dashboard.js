@@ -15,7 +15,7 @@ const Dashboard = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch('http://localhost:8000/api/dashboard/stats');
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/dashboard/stats`);
       if (!response.ok) {
         const errorText = await response.text();
         throw new Error(`Failed to fetch dashboard stats: ${errorText}`);

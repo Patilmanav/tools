@@ -56,7 +56,7 @@ const ImageTools = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://localhost:8000/api/get-image-info', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/get-image-info`, {
         method: 'POST',
         body: formData,
       });
@@ -99,7 +99,7 @@ const ImageTools = () => {
     });
 
     try {
-      const response = await fetch(`http://localhost:8000/api/${operation}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/${operation}`, {
         method: 'POST',
         body: formData,
       });
@@ -157,7 +157,7 @@ const ImageTools = () => {
           formData.append(key, params[key]);
         });
 
-        const response = await fetch(`http://localhost:8000/api/${operation}`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/${operation}`, {
           method: 'POST',
           body: formData,
         });
