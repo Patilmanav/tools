@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+PyPDF2
+pdf2docx
+python-docx
+img2pdf
+docx2pdf
+PyMuPDF
+Pillow
+pymysql
+python-dotenv 

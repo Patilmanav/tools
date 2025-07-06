@@ -1,0 +1,77 @@
+.floating-badge {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.floating-badge-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.floating-badge-link:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.floating-badge-icon {
+  font-size: 1.1rem;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+}
+
+.floating-badge-text {
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+/* Hide on mobile devices */
+@media (max-width: 768px) {
+  .floating-badge {
+    display: none;
+  }
+}
+
+/* Hide on very small screens */
+@media (max-width: 480px) {
+  .floating-badge {
+    display: none;
+  }
+}
+
+/* Optional: Add a subtle animation on page load */
+@keyframes badgeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+.floating-badge {
+  animation: badgeFadeIn 0.5s ease-out 1s both;
+} 
