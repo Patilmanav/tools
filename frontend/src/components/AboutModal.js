@@ -32,7 +32,7 @@ const AboutModal = ({ isOpen, onClose }) => {
             <h3>Connect with me:</h3>
             <div className="about-links-grid">
               <a 
-                href="https://patilmanav.com" 
+                href="https://patilmanav.vercel.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="about-link portfolio-link"
@@ -52,7 +52,7 @@ const AboutModal = ({ isOpen, onClose }) => {
               </a>
               
               <a 
-                href="https://www.linkedin.com/in/yourprofile" 
+                href="https://www.linkedin.com/in/manav-patil" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="about-link linkedin-link"
