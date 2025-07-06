@@ -47,7 +47,7 @@ function App() {
       formData.append('custom_ranges', customRanges);
     }
 
-    fetch(`http://localhost:8000/api/split`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/split`, {
       method: 'POST',
       body: formData,
     })
@@ -100,7 +100,7 @@ function App() {
     }
     formData.append('quality', compressQuality);
 
-    fetch(`http://localhost:8000/api/compress-pdf`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/compress-pdf`, {
       method: 'POST',
       body: formData,
     })
@@ -183,7 +183,7 @@ function App() {
       formData.append('files', file);
     }
 
-    fetch(`http://localhost:8000/api/${operation}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/${operation}`, {
       method: 'POST',
       body: formData,
     })
